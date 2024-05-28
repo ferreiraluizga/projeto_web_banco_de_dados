@@ -40,13 +40,6 @@ CREATE TABLE `pessoa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `pessoa`
---
-
-INSERT INTO `pessoa` (`id`, `nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`, `telefone`, `celular`) VALUES
-(1, 'Luiz Gabriel Ferreira', 'Rua Antônio Moura Andrade', 'Itaquera', '08210660', 'SÃ£o Paulo', 'SP', '1198922549', '11998922549');
-
---
 -- Índices para tabelas despejadas
 --
 
