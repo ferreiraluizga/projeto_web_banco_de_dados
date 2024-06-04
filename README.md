@@ -5,3 +5,4 @@
 - v2: adição de classe de modelagem
 - v3: conexão do formulário (no index) com o banco de dados
 - v4: alterações na página de consulta
+- v5: comentários nos arquivos e estilização do index.php e consultar.php

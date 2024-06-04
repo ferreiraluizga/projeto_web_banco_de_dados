@@ -1,4 +1,5 @@
 <?php
+    //importação do arquivo pessoaController.php para a página e verificação de funcionamento e existência do mesmo
     require_once $_SERVER['DOCUMENT_ROOT'] . '/projeto_web_banco_de_dados/controller/pessoaController.php';
 ?>
 
@@ -12,7 +13,39 @@
     <title>Tela de Consulta</title>
 </head>
 <body>
-    <div class="container">
+
+    <header>
+        <div class="row fixed-top bg-primary">
+            <div class="col">
+                <div class="container m-auto">
+                    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="index.html">Sistema de Cadastro</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="index.php">Cadastrar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="consultar.php">Consultar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+    <div class="container m-auto mb-2">
         <h2>Consulta</h2>
         <table class="table">
             <thead>
@@ -25,14 +58,15 @@
             </thead>
             <tbody>
                 <?php
-                    $pessoaController = new PessoaController();
-                    $pessoas = $pessoaController->listar();
-                    foreach($pessoas as $pessoa){
+                    $pessoaController = new PessoaController(); //instanciação da classe pessoaController
+                    $pessoas = $pessoaController->listar(); //criação da varivel $pessoas, e atribuição do retorno método listar() a ela
+                    //foreach: enquanto houverem dados na variavel $pessoas, eles serão atribuidos a $pessoa (de forma associativa)
+                    foreach($pessoas as $pessoa){                     
                 ?>        
                         <tr>
-                            <th><?php echo $pessoa['nome']; ?></th>
-                            <th><?php echo $pessoa['telefone']; ?></th>
-                            <th><?php echo $pessoa['celular']; ?></th>
+                            <th><?php echo $pessoa['nome']; //exibição do nome do usuario ?></th>
+                            <th><?php echo $pessoa['telefone']; //exibição do telefone do usuario ?></th>
+                            <th><?php echo $pessoa['celular']; //exibição do celular do usuario ?></th>
                             <th></th>
                         </tr>
                 <?php } ?>
