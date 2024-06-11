@@ -20,7 +20,7 @@
                 <div class="container m-auto">
                     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">Sistema de Cadastro</a>
+                            <a class="navbar-brand" href="index.php">Sistema de Cadastro</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                                 aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
                                         <a class="nav-link" aria-current="page" href="index.php">Cadastrar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="consultar.php">Consultar</a>
+                                        <a class="nav-link" href="consultar.php?acao=consultar">Consultar</a>
                                     </li>
                                 </ul>
                             </div>
@@ -67,7 +67,9 @@
                             <th><?php echo $pessoa['nome']; //exibição do nome do usuario ?></th>
                             <th><?php echo $pessoa['telefone']; //exibição do telefone do usuario ?></th>
                             <th><?php echo $pessoa['celular']; //exibição do celular do usuario ?></th>
-                            <th></th>
+                            <th>
+                                <a href="editar.php?id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID -->
+                            </th>
                         </tr>
                 <?php } ?>
             </tbody>

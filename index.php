@@ -15,7 +15,7 @@
                 <div class="container m-auto">
                     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">Sistema de Cadastro</a>
+                            <a class="navbar-brand" href="index.php">Sistema de Cadastro</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                                 aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
                                         <a class="nav-link active" aria-current="page" href="index.php">Cadastrar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="consultar.php">Consultar</a>
+                                        <a class="nav-link" href="consultar.php?acao=consultar">Consultar</a>
                                     </li>
                                 </ul>
                             </div>
@@ -43,7 +43,7 @@
     <div class="container m-auto mb-2">
         <h2 class="mb-3">Cadastro</h2>
 
-        <form method="POST" action="controller/pessoaController.php"> <!-- ação do formulário que leva ao pessoaController.php -->
+        <form method="POST" action="controller/pessoaController.php?acao=inserir"> <!-- ação do formulário que leva ao pessoaController.php -->
             <div class="form-group mb-2">
                 <label for="nome">Nome:</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome">

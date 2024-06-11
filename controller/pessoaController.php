@@ -12,6 +12,9 @@ class PessoaController{
         $this->pessoa = new Pessoa(); //instanciação da classe pessoa.php
         if($_GET['acao'] == 'inserir'){ //verificando ação do formulario do index.php
             $this->inserir(); //caso verdadeira, armazena dados do usuario dados do usuário
+        }
+        if($_GET['acao'] == 'atualizar'){
+            $this->atualizar($_GET['id']);
         }       
     }
 
@@ -32,6 +35,24 @@ class PessoaController{
     //função publica que lista dados do usuário
     public function listar(){
         return $this->pessoa->listar();
+    }
+
+    public function buscarPorId($id){
+        return $this->pessoa->buscarPorId($id);
+    }
+
+    //função publica que atualiza dados do usuário
+    public function atualizar($id){
+        $this->pessoa->setNome($_POST['nome']);
+        $this->pessoa->setEndereco($_POST['endereco']);
+        $this->pessoa->setBairro($_POST['bairro']);
+        $this->pessoa->setCep($_POST['cep']);
+        $this->pessoa->setCidade($_POST['cidade']);
+        $this->pessoa->setEstado($_POST['estado']);
+        $this->pessoa->setTelefone($_POST['telefone']);
+        $this->pessoa->setCelular($_POST['celular']);
+
+        $this->pessoa->atualizar($id);
     }
 }
 

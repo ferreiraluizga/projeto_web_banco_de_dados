@@ -6,3 +6,4 @@
 - v3: conexão do formulário (no index) com o banco de dados
 - v4: alterações na página de consulta
 - v5: comentários nos arquivos e estilização do index.php e consultar.php
+- v6: alterações na tela editar.php e adição de método para atualizar dados
