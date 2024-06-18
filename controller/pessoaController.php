@@ -37,6 +37,7 @@ class PessoaController{
         return $this->pessoa->listar();
     }
 
+    //função publica que busca dados do usuário pelo id (consulta)
     public function buscarPorId($id){
         return $this->pessoa->buscarPorId($id);
     }

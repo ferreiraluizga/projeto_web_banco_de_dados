@@ -68,7 +68,7 @@
                             <th><?php echo $pessoa['telefone']; //exibição do telefone do usuario ?></th>
                             <th><?php echo $pessoa['celular']; //exibição do celular do usuario ?></th>
                             <th>
-                                <a href="editar.php?id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID -->
+                                <a href="editar.php?acao=editar&id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID -->
                             </th>
                         </tr>
                 <?php } ?>

@@ -119,19 +119,22 @@ class Pessoa{
         return $pessoas; // a função retorna o vetor com dados atribuidos
     }
 
+    //busca o usuario pelo id
     public function buscarPorId($id){
-        $sql = "SELECT * FROM pessoa WHERE id = ?";
-        $stmt = $this->conexao->getConexao()->prepare($sql);
-        $stmt->bind_param('i', $id);
+        $sql = "SELECT * FROM pessoa WHERE id = ?"; //comando sql para procurar dados do usuario pelo id unico (select)
+        $stmt = $this->conexao->getConexao()->prepare($sql); //preparando o banco para a inserção de dados
+        $stmt->bind_param('i', $id); //puxando id e definindo como inteiro
         $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_assoc();
+        $result = $stmt->get_result(); //atribuição do resultado da consulta à varivavel $result
+        return $result->fetch_assoc(); //retorna o resultado como matriz associativa, puxando todos os dados inseridos no determinado id
     }
 
     //função publica que atualiza dados do usuário com base no banco de dados
     public function atualizar($id){
+        //atualiza dados buscando registro pelo id (único)
         $sql = "UPDATE pessoa SET nome = ?, endereco = ?, bairro = ?, cep = ?, cidade = ?, estado = ?, telefone = ?, celular = ? WHERE id = ?";
         $stmt = $this->conexao->getConexao()->prepare($sql);
+        //atualizando cada campo e mantendo id do usuário
         $stmt->bind_param('ssssssssi', $this->nome, $this->endereco, $this->bairro, $this->cep, $this->cidade, $this->estado, $this->telefone, $this->celular, $id);
         return $stmt->execute();
     }

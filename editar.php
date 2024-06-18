@@ -45,10 +45,12 @@
     <div class="container m-auto mb-2">
         <h2 class="mb-3">Editar</h2>
         <?php
+            //buscando id do usuário
             $pessoaController = new pessoaController();
             $pessoa = $pessoaController->buscarPorId($_GET['id']);
         ?>
-        <form method="POST" action="controller/pessoaController.php?acao=atualizar&id=<?php echo $pessoa['id'] ?>">
+        <form method="POST" action="controller/pessoaController.php?acao=atualizar&id=<?php echo $pessoa['id'] ?>"> <!-- a ação do formulário atualiza o registro -->
+            <!-- em cada um dos campos, o respectivo dado é atribuido atraves do buscarPorId -->
             <div class="form-group mb-2">
                 <label for="nome">Nome:</label>
                 <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $pessoa['nome'] ?>">
