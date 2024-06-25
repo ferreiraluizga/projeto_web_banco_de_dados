@@ -32,7 +32,7 @@
                                         <a class="nav-link" aria-current="page" href="index.php">Cadastrar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="consultar.php?acao=consultar">Consultar</a>
+                                        <a class="nav-link active" href="consultar.php?acao=consultar">Consultar</a>
                                     </li>
                                 </ul>
                             </div>
@@ -47,7 +47,7 @@
 
     <div class="container m-auto mb-2">
         <h2>Consulta</h2>
-        <table class="table">
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -64,12 +64,12 @@
                     foreach($pessoas as $pessoa){                     
                 ?>        
                         <tr>
-                            <th><?php echo $pessoa['nome']; //exibição do nome do usuario ?></th>
-                            <th><?php echo $pessoa['telefone']; //exibição do telefone do usuario ?></th>
-                            <th><?php echo $pessoa['celular']; //exibição do celular do usuario ?></th>
-                            <th>
+                            <td><?php echo $pessoa['nome']; //exibição do nome do usuario ?></td>
+                            <td><?php echo $pessoa['telefone']; //exibição do telefone do usuario ?></td>
+                            <td><?php echo $pessoa['celular']; //exibição do celular do usuario ?></td>
+                            <td>
                                 <a href="editar.php?acao=editar&id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID -->
-                            </th>
+                            </td>
                         </tr>
                 <?php } ?>
             </tbody>

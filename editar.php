@@ -43,47 +43,53 @@
     <br>
 
     <div class="container m-auto mb-2">
-        <h2 class="mb-3">Editar</h2>
         <?php
             //buscando id do usuário
             $pessoaController = new pessoaController();
             $pessoa = $pessoaController->buscarPorId($_GET['id']);
         ?>
-        <form method="POST" action="controller/pessoaController.php?acao=atualizar&id=<?php echo $pessoa['id'] ?>"> <!-- a ação do formulário atualiza o registro -->
+        <h2 class="mb-3">Editar</h2>
+        <form method="POST" action="controller/pessoaController.php?acao=atualizar&id=<?php echo $pessoa['id'] ?>"> <!-- ação do formulário que leva ao pessoaController.php -->
             <!-- em cada um dos campos, o respectivo dado é atribuido atraves do buscarPorId -->
             <div class="form-group mb-2">
                 <label for="nome">Nome:</label>
                 <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $pessoa['nome'] ?>">
             </div>
-            <div class="form-group mb-2">
-                <label for="endereco">Endereço:</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" value="<?php echo $pessoa['endereco'] ?>">
+            <div class="row">
+                <div class="form-group col-12 col-lg-6 mb-2">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco" value="<?php echo $pessoa['endereco'] ?>">
+                </div>
+                <div class="form-group col-12 col-lg-6 mb-2">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $pessoa['bairro'] ?>">
+                </div>
             </div>
-            <div class="form-group mb-2">
-                <label for="bairro">Bairro:</label>
-                <input type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $pessoa['bairro'] ?>">
+            <div class="row mb-2">
+                <div class="form-group col-12 col-lg-4">
+                    <label for="cep">CEP:</label>
+                    <input type="text" class="form-control" id="cep" name="cep" value="<?php echo $pessoa['cep'] ?>">
+                </div>
+                <div class="form-group col-12 col-lg-4">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $pessoa['cidade'] ?>">
+                </div>
+                <div class="form-group col-12 col-lg-4">
+                    <label for="estado">Estado:</label>
+                    <input type="text" class="form-control" id="estado" name="estado" value="<?php echo $pessoa['estado'] ?>">
+                </div>
             </div>
-            <div class="form-group mb-2">
-                <label for="cep">CEP:</label>
-                <input type="text" class="form-control" id="cep" name="cep" value="<?php echo $pessoa['cep'] ?>">
+            <div class="row mb-3">
+                <div class="form-group col-12 col-lg-6">
+                    <label for="telefoneFixo">Telefone Fixo:</label>
+                    <input type="text" class="form-control" id="telefone" name="telefone" value="<?php echo $pessoa['telefone'] ?>">
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label for="celular">Celular:</label>
+                    <input type="text" class="form-control" id="celular" name="celular" value="<?php echo $pessoa['celular'] ?>">
+                </div>
             </div>
-            <div class="form-group mb-2">
-                <label for="cidade">Cidade:</label>
-                <input type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $pessoa['cidade'] ?>">
-            </div>
-            <div class="form-group mb-2">
-                <label for="estado">Estado:</label>
-                <input type="text" class="form-control" id="estado" name="estado" value="<?php echo $pessoa['estado'] ?>">
-            </div>
-            <div class="form-group mb-2">
-                <label for="telefoneFixo">Telefone Fixo:</label>
-                <input type="text" class="form-control" id="telefone" name="telefone" value="<?php echo $pessoa['telefone'] ?>">
-            </div>
-            <div class="form-group mb-3">
-                <label for="celular">Celular:</label>
-                <input type="text" class="form-control" id="celular" name="celular" value="<?php echo $pessoa['celular'] ?>">
-            </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
         </form>
     </div>
 </body>
