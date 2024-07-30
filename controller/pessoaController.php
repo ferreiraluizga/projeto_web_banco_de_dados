@@ -12,10 +12,11 @@ class PessoaController{
         $this->pessoa = new Pessoa(); //instanciação da classe pessoa.php
         if($_GET['acao'] == 'inserir'){ //verificando ação do formulario do index.php
             $this->inserir(); //caso verdadeira, armazena dados do usuario dados do usuário
-        }
-        if($_GET['acao'] == 'atualizar'){
+        }else if($_GET['acao'] == 'atualizar'){
             $this->atualizar($_GET['id']);
-        }       
+        }else if($_GET['acao'] == 'excluir'){
+            $this->excluir($_GET['id']);
+        }     
     }
 
     //função publica para inserir dados do usuário
@@ -54,6 +55,11 @@ class PessoaController{
         $this->pessoa->setCelular($_POST['celular']);
 
         $this->pessoa->atualizar($id);
+    }
+
+    //função publica que exclui dados do usuário
+    public function excluir($id){
+        $this->pessoa->excluir($id);
     }
 }
 

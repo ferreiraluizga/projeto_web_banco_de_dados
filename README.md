@@ -8,3 +8,4 @@
 - v5: comentários nos arquivos e estilização do index.php e consultar.php
 - v6: alterações na tela editar.php e adição de método para atualizar dados
 - v7: comentários nas areas de select e update (consultar e atualizar dados)
+- v8: adição da função de exclusão de dados juntamente a sua respectiva página

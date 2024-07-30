@@ -53,7 +53,7 @@
                     <th>Nome</th>
                     <th>Telefone</th>
                     <th>Celular</th>
-                    <th>Ações</th>
+                    <th colspan="2">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -67,9 +67,8 @@
                             <td><?php echo $pessoa['nome']; //exibição do nome do usuario ?></td>
                             <td><?php echo $pessoa['telefone']; //exibição do telefone do usuario ?></td>
                             <td><?php echo $pessoa['celular']; //exibição do celular do usuario ?></td>
-                            <td>
-                                <a href="editar.php?acao=editar&id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID -->
-                            </td>
+                            <td><a href="editar.php?id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID --></td>
+                            <td><a href="excluir.php?id=<?php echo $pessoa['id']; ?>">Excluir</a> <!-- busca os dados do usuário pelo ID --></td>
                         </tr>
                 <?php } ?>
             </tbody>
