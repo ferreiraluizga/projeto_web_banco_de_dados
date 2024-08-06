@@ -40,7 +40,7 @@
         </div>
     </header>
 
-    <br>
+    <br><br><br>
 
     <div class="container m-auto mb-2">
         <?php
@@ -48,7 +48,7 @@
             $pessoaController = new pessoaController();
             $pessoa = $pessoaController->buscarPorId($_GET['id']);
         ?>
-        <h2 class="mb-3">Editar</h2>
+        <h2 class="mb-3">Editar Cadastro</h2>
         <form method="POST" onsubmit="alert('Cadastro atualizado com sucesso!')" action="controller/pessoaController.php?acao=atualizar&id=<?php echo $pessoa['id'] ?>"> <!-- ação do formulário que leva ao pessoaController.php -->
             <!-- em cada um dos campos, o respectivo dado é atribuido atraves do buscarPorId -->
             <div class="form-group mb-2">

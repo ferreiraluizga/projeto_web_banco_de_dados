@@ -46,7 +46,7 @@
     <br><br><br>
 
     <div class="container m-auto mb-2">
-        <h2 class="mb-3">Consultar Cliente</h2>
+        <h2 class="mb-3">Consultar Clientes</h2>
 
         <table class="table table-hover">
             <thead>
