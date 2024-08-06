@@ -9,3 +9,4 @@
 - v6: alterações na tela editar.php e adição de método para atualizar dados
 - v7: comentários nas areas de select e update (consultar e atualizar dados)
 - v8: adição da função de exclusão de dados juntamente a sua respectiva página
+- v9: finalização do projeto, com alterações no header e redirecionamento de páginas

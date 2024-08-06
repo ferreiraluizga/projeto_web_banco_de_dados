@@ -41,48 +41,52 @@
     <br><br><br>
 
     <div class="container m-auto mb-2">
-        <h2 class="mb-3">Cadastro</h2>
+        <h2 class="mb-3">Cadastrar Cliente</h2>
 
-        <form method="POST" action="controller/pessoaController.php?acao=inserir"> <!-- ação do formulário que leva ao pessoaController.php -->
-            <div class="form-group mb-2">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome">
+        <form method="POST" onsubmit="alert('Cliente cadastrado com sucesso!')" action="controller/pessoaController.php?acao=inserir"> <!-- ação do formulário que leva ao pessoaController.php -->
+        <div class="row">
+            <div class="col">
+                <div class="form-group mb-3">
+                    <label for="nome">Nome:</label>
+                    <input required type="text" class="form-control mt-2" id="nome" name="nome" placeholder="Digite o nome">
+                </div>
+            </div>
+        </div>    
+            <div class="row">
+                <div class="form-group col-12 col-lg-6 mb-3">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" class="form-control mt-2" id="endereco" name="endereco" placeholder="Digite o endereço">
+                </div>
+                <div class="form-group col-12 col-lg-6 mb-3">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" class="form-control mt-2" id="bairro" name="bairro" placeholder="Digite o bairro">
+                </div>
             </div>
             <div class="row">
-                <div class="form-group col-12 col-lg-6 mb-2">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite o endereço">
-                </div>
-                <div class="form-group col-12 col-lg-6 mb-2">
-                    <label for="bairro">Bairro:</label>
-                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Digite o bairro">
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="form-group col-12 col-lg-4">
+                <div class="form-group col-12 col-lg-4 mb-3">
                     <label for="cep">CEP:</label>
-                    <input type="text" class="form-control" id="cep" name="cep" placeholder="Digite o CEP">
+                    <input type="text" class="form-control mt-2" id="cep" name="cep" placeholder="Digite o CEP">
                 </div>
-                <div class="form-group col-12 col-lg-4">
+                <div class="form-group col-12 col-lg-4 mb-3">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite a cidade">
+                    <input type="text" class="form-control mt-2" id="cidade" name="cidade" placeholder="Digite a cidade">
                 </div>
-                <div class="form-group col-12 col-lg-4">
+                <div class="form-group col-12 col-lg-4 mb-3">
                     <label for="estado">Estado:</label>
-                    <input type="text" class="form-control" id="estado" name="estado" placeholder="Digite o estado">
+                    <input type="text" class="form-control mt-2" id="estado" name="estado" placeholder="Digite o estado">
                 </div>
             </div>
-            <div class="row mb-3">
-                <div class="form-group col-12 col-lg-6">
+            <div class="row">
+                <div class="form-group col-12 col-lg-6 mb-3">
                     <label for="telefoneFixo">Telefone Fixo:</label>
-                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Digite o telefone fixo">
+                    <input type="text" class="form-control mt-2" id="telefone" name="telefone" placeholder="Digite o telefone fixo">
                 </div>
-                <div class="form-group col-12 col-lg-6">
+                <div class="form-group col-12 col-lg-6 mb-3">
                     <label for="celular">Celular:</label>
-                    <input type="text" class="form-control" id="celular" name="celular" placeholder="Digite o celular">
+                    <input type="text" class="form-control mt-2" id="celular" name="celular" placeholder="Digite o celular">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
         </form>
     </div>
 </body>

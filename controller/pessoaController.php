@@ -12,10 +12,16 @@ class PessoaController{
         $this->pessoa = new Pessoa(); //instanciação da classe pessoa.php
         if($_GET['acao'] == 'inserir'){ //verificando ação do formulario do index.php
             $this->inserir(); //caso verdadeira, armazena dados do usuario dados do usuário
+            header('Location: ../index.php');
+            exit;
         }else if($_GET['acao'] == 'atualizar'){
             $this->atualizar($_GET['id']);
+            header('Location: ../consultar.php?acao=consultar');
+            exit;
         }else if($_GET['acao'] == 'excluir'){
             $this->excluir($_GET['id']);
+            header('Location: ../consultar.php?acao=consultar');
+            exit;
         }     
     }
 

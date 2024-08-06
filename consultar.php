@@ -43,10 +43,11 @@
         </div>
     </header>
 
-    <br>
+    <br><br><br>
 
     <div class="container m-auto mb-2">
-        <h2>Consulta</h2>
+        <h2 class="mb-3">Consultar Cliente</h2>
+
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -67,8 +68,8 @@
                             <td><?php echo $pessoa['nome']; //exibição do nome do usuario ?></td>
                             <td><?php echo $pessoa['telefone']; //exibição do telefone do usuario ?></td>
                             <td><?php echo $pessoa['celular']; //exibição do celular do usuario ?></td>
-                            <td><a href="editar.php?id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID --></td>
-                            <td><a href="excluir.php?id=<?php echo $pessoa['id']; ?>">Excluir</a> <!-- busca os dados do usuário pelo ID --></td>
+                            <td><a class="text-primary" href="editar.php?acao=editar&id=<?php echo $pessoa['id']; ?>">Editar</a> <!-- busca os dados do usuário pelo ID --></td>
+                            <td><a class="text-danger" href="excluir.php?acao=editar&id=<?php echo $pessoa['id']; ?>">Excluir</a> <!-- busca os dados do usuário pelo ID --></td>
                         </tr>
                 <?php } ?>
             </tbody>
