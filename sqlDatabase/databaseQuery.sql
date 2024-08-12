@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Maio-2024 às 17:29
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Tempo de geração: 12/08/2024 às 02:57
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,11 +20,13 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `exemplo_aula_pw`
 --
+CREATE DATABASE IF NOT EXISTS `exemplo_aula_pw` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `exemplo_aula_pw`;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `pessoa`
+-- Estrutura para tabela `pessoa`
 --
 
 CREATE TABLE `pessoa` (
@@ -44,22 +46,17 @@ CREATE TABLE `pessoa` (
 --
 
 --
--- Índices para tabela `pessoa`
+-- Índices de tabela `pessoa`
 --
 ALTER TABLE `pessoa`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `pessoa`
 --
 ALTER TABLE `pessoa`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
